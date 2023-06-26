@@ -1,0 +1,29 @@
+fileFormatVersion: 2
+guid: 7f449674a592d40f6938446a1353cc84
+importerOverride: ZEPETO.Script.Compiler:ZEPETO.Script:TypescriptAssetImporter
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: -1123457745, guid: 54cf806323ffe4418a4ce4cc63fe6b9d, type: 3}
+  isAssemblyDeclarations: 0
+  assembly: 
+  generateAllTypes: 1
+  types: []
+  generateWrapper: 0
+  overrideWrapperTypes: 0
+  wrapperTypes: []
+  WrapperFilters: []
+  wrapperOutputDirectory: Generated
+  compiledResult: '{"source":"\"use strict\";\r\nObject.defineProperty(exports, \"__esModule\",
+    { value: true });\r\nconst UnityEngine_1 = require(\"UnityEngine\");\r\nconst
+    ZEPETO_Script_1 = require(\"ZEPETO.Script\");\r\nclass BulletSpawnScript extends
+    ZEPETO_Script_1.ZepetoScriptBehaviour {\r\n    OnTriggerEnter(col) {\r\n       
+    if (!col.CompareTag(\"Player\")) {\r\n            UnityEngine_1.GameObject.Destroy(this.gameObject);\r\n           
+    console.log(\"The projectile was destroyed\");\r\n        }\r\n    }\r\n}\r\nexports.default
+    = BulletSpawnScript;\r\n//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiYnVsbGV0U3Bhd25pbmcuanMiLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyJidWxsZXRTcGF3bmluZy50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiOztBQUFBLDZDQUFtRjtBQUNuRixpREFBcUQ7QUFJckQsTUFBcUIsaUJBQWtCLFNBQVEscUNBQXFCO0lBR2hFLGNBQWMsQ0FBQyxHQUFhO1FBRXhCLElBQUcsQ0FBQyxHQUFHLENBQUMsVUFBVSxDQUFDLFFBQVEsQ0FBQyxFQUM1QjtZQUNJLHdCQUFVLENBQUMsT0FBTyxDQUFDLElBQUksQ0FBQyxVQUFVLENBQUMsQ0FBQTtZQUNuQyxPQUFPLENBQUMsR0FBRyxDQUFDLDhCQUE4QixDQUFDLENBQUE7U0FDOUM7SUFDTCxDQUFDO0NBRUo7QUFaRCxvQ0FZQyJ9","assetPath":"Assets/bulletSpawningComponent/ZepetoScripts/bulletSpawning.ts","manifest":{"properties":[],"name":"BulletSpawnScript","description":"","hasAnimatorMove":false},"isCompiled":true}'
+  typescriptHash: bd4ff8766c2768158d8b30b303d9cfd6
+  onlyWriteTrigger: 0

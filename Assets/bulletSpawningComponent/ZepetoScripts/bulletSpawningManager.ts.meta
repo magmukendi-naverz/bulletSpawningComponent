@@ -1,0 +1,40 @@
+fileFormatVersion: 2
+guid: 70ad8e4e02b2d4144aae923cd4aad586
+importerOverride: ZEPETO.Script.Compiler:ZEPETO.Script:TypescriptAssetImporter
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: -1123457745, guid: 54cf806323ffe4418a4ce4cc63fe6b9d, type: 3}
+  isAssemblyDeclarations: 0
+  assembly: 
+  generateAllTypes: 1
+  types: []
+  generateWrapper: 0
+  overrideWrapperTypes: 0
+  wrapperTypes: []
+  WrapperFilters: []
+  wrapperOutputDirectory: Generated
+  compiledResult: '{"source":"\"use strict\";\r\nObject.defineProperty(exports, \"__esModule\",
+    { value: true });\r\nconst UnityEngine_1 = require(\"UnityEngine\");\r\nconst
+    ZEPETO_Script_1 = require(\"ZEPETO.Script\");\r\nconst UnityEngine = require(\"UnityEngine\");\r\nconst
+    ZEPETO_Character_Controller_1 = require(\"ZEPETO.Character.Controller\");\r\nclass
+    BulletSpawner extends ZEPETO_Script_1.ZepetoScriptBehaviour {\r\n    Start()
+    {\r\n        ZEPETO_Character_Controller_1.ZepetoPlayers.instance.OnAddedLocalPlayer.AddListener(()
+    => {\r\n            this._localCharacter = ZEPETO_Character_Controller_1.ZepetoPlayers.instance.LocalPlayer.zepetoPlayer.character;\r\n       
+    });\r\n        this.fireButton.onClick.AddListener(() => {\r\n            this.fireBullet();\r\n           
+    console.log(\"The bullet was fired\");\r\n        });\r\n    }\r\n    fireBullet()
+    {\r\n        const newBullet = UnityEngine.GameObject.Instantiate(this.bullet,
+    this._localCharacter.GetSocket(ZEPETO_Character_Controller_1.KnowSockets.HEAD_UPPER).position,
+    this._localCharacter.transform.rotation, this.parentContainer.transform);\r\n       
+    newBullet.GetComponent($typeof(UnityEngine_1.Rigidbody)).AddForce(UnityEngine_1.Vector3.op_Multiply(newBullet.transform.forward,
+    1000));\r\n    }\r\n    Update() {\r\n        if (UnityEngine_1.Input.GetKeyDown(UnityEngine_1.KeyCode.DownArrow))
+    {\r\n            this.SpawnBullet(this.InitialTransform.position, this.InitialTransform.rotation);\r\n       
+    }\r\n    }\r\n    SpawnBullet(position, rotation) {\r\n        let InstantiateBullet
+    = UnityEngine_1.Object.Instantiate(this.bullet, position, rotation);\r\n    }\r\n}\r\nexports.default
+    = BulletSpawner;\r\n//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiYnVsbGV0U3Bhd25pbmdNYW5hZ2VyLmpzIiwic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsiYnVsbGV0U3Bhd25pbmdNYW5hZ2VyLnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7O0FBQUEsNkNBQTRHO0FBQzVHLGlEQUFxRDtBQUdyRCwyQ0FBMkM7QUFDM0MsNkVBQTBGO0FBRzFGLE1BQXFCLGFBQWMsU0FBUSxxQ0FBcUI7SUFTNUQsS0FBSztRQUVELDJDQUFhLENBQUMsUUFBUSxDQUFDLGtCQUFrQixDQUFDLFdBQVcsQ0FBQyxHQUFFLEVBQUU7WUFFdEQsSUFBSSxDQUFDLGVBQWUsR0FBRywyQ0FBYSxDQUFDLFFBQVEsQ0FBQyxXQUFXLENBQUMsWUFBWSxDQUFDLFNBQVMsQ0FBQTtRQUNwRixDQUFDLENBQUMsQ0FBQTtRQUNGLElBQUksQ0FBQyxVQUFVLENBQUMsT0FBTyxDQUFDLFdBQVcsQ0FBQyxHQUFFLEVBQUU7WUFDcEMsSUFBSSxDQUFDLFVBQVUsRUFBRSxDQUFBO1lBQ2pCLE9BQU8sQ0FBQyxHQUFHLENBQUMsc0JBQXNCLENBQUMsQ0FBQTtRQUN2QyxDQUFDLENBQUMsQ0FBQTtJQUNOLENBQUM7SUFHTyxVQUFVO1FBRWQsTUFBTSxTQUFTLEdBQUcsV0FBVyxDQUFDLFVBQVUsQ0FBQyxXQUFXLENBQUMsSUFBSSxDQUFDLE1BQU0sRUFBRSxJQUFJLENBQUMsZUFBZSxDQUFDLFNBQVMsQ0FBQyx5Q0FBVyxDQUFDLFVBQVUsQ0FBQyxDQUFDLFFBQVEsRUFBQyxJQUFJLENBQUMsZUFBZSxDQUFDLFNBQVMsQ0FBQyxRQUFRLEVBQUUsSUFBSSxDQUFDLGVBQWUsQ0FBQyxTQUFTLENBQWUsQ0FBQztRQUN6TixTQUFTLENBQUMsWUFBWSxTQUFDLHVCQUFTLEdBQUksUUFBUSxDQWpDSixxQkFBTyxDQW1EMm9vQixXQUFZLENBbEJ6cG9CLFNBQVMsQ0FBQyxTQUFTLENBQUMsT0FBTyxFQUFHLElBQUksRUFBQyxDQUFBO0lBRXBGLENBQUM7SUFDRCxNQUFNO1FBRUYsSUFBSSxtQkFBSyxDQUFDLFVBQVUsQ0FBQyxxQkFBTyxDQUFDLFNBQVMsQ0FBQyxFQUN2QztZQUNJLElBQUksQ0FBQyxXQUFXLENBQUMsSUFBSSxDQUFDLGdCQUFnQixDQUFDLFFBQVEsRUFBRSxJQUFJLENBQUMsZ0JBQWdCLENBQUMsUUFBUSxDQUFDLENBQUE7U0FDbkY7SUFDTCxDQUFDO0lBRU8sV0FBVyxDQUFFLFFBQWlCLEVBQUUsUUFBbUI7UUFFdkQsSUFBSSxpQkFBaUIsR0FBRyxvQkFBTSxDQUFDLFdBQVcsQ0FBQyxJQUFJLENBQUMsTUFBTSxFQUFFLFFBQVEsRUFBRSxRQUFRLENBQUMsQ0FBQTtJQUcvRSxDQUFDO0NBRUo7QUEzQ0QsZ0NBMkNDIn0=","assetPath":"Assets/bulletSpawningComponent/ZepetoScripts/bulletSpawningManager.ts","manifest":{"properties":[{"assembly":"UnityEngine.CoreModule","name":"bullet","type":"UnityEngine.GameObject","isArray":false,"initValue":[],"enumKeys":[],"enumValues":[],"attributes":[{"name":"SerializeField","args":[]}]},{"assembly":"UnityEngine.UI","name":"fireButton","type":"UnityEngine.UI.Button","isArray":false,"initValue":[],"enumKeys":[],"enumValues":[],"attributes":[{"name":"SerializeField","args":[]}]},{"assembly":"UnityEngine.CoreModule","name":"parentContainer","type":"UnityEngine.GameObject","isArray":false,"initValue":[],"enumKeys":[],"enumValues":[],"attributes":[{"name":"SerializeField","args":[]}]}],"name":"BulletSpawner","description":"","hasAnimatorMove":false},"isCompiled":true}'
+  typescriptHash: 49709f8e330a75bb4f31bdeb64cceed5
+  onlyWriteTrigger: 0

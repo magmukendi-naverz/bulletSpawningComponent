@@ -72,3 +72,6 @@ crashlytics-build.properties
 /[Aa]ssets/[Ss]treamingAssets/aa/*
 # keep the *.asset files from Library
 !/[Ll]ibrary/*.asset
+
+
+node_modules
